@@ -10,8 +10,9 @@
 dist/
 build/
 
-# Environment variables
+# Environments
 .env
+.env.local
 
 # OS generated files
 .DS_Store

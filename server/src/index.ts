@@ -3,6 +3,8 @@ import cors from 'cors';
 import swaggerJsdoc from 'swagger-jsdoc';
 import apiRoutes from './routes.js'; // Use .js extension
 import { apiReference } from '@scalar/express-api-reference';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;

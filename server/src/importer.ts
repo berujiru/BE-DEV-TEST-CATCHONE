@@ -4,6 +4,8 @@ import { fileURLToPath } from 'url';
 import csv from 'csv-parser';
 import { open } from 'sqlite';
 import sqlite3 from 'sqlite3';
+import dotenv from 'dotenv';
+dotenv.config();
 
 // Fix for __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
@@ -11,7 +13,7 @@ const __dirname = path.dirname(__filename);
 
 async function setupDatabase() {
   const db = await open({
-    filename: './database.sqlite',
+    filename: process.env.DATABASE_PATH || './database.sqlite',
     driver: sqlite3.Database
   });
 
