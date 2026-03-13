@@ -27,6 +27,7 @@
     "@types/express": "^5.0.6",
     "@types/node": "^25.5.0",
     "@types/sqlite3": "^3.1.11",
+    "@types/swagger-jsdoc": "^6.0.4",
     "nodemon": "^3.1.14",
     "swagger-jsdoc": "^6.2.8",
     "ts-node": "^10.9.2",

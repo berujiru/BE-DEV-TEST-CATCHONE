@@ -3,6 +3,9 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true, // Only if using TS 5.7+
+    "noEmit": true, // Required for allowImportingTsExtensions
     "moduleResolution": "node",
     "lib": ["ESNext"],
     "esModuleInterop": true,
