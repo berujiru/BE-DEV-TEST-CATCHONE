@@ -61,22 +61,48 @@ const router = Router();
  *                         type: string
  *                       website:
  *                         type: string
- *                 total:
- *                   type: integer
- *                   description: Total count of matching records (across all pages)
+ *                 meta:
+ *                   type: object
+ *                   properties:
+ *                     total:
+ *                       type: integer
+ *                       description: Total count of matching records (across all pages)
+ *                     page:
+ *                       type: integer
+ *                       description: Current page number
+ *                     limit:
+ *                       type: integer
+ *                       description: Records per page
+ *                     last_page:
+ *                       type: integer
+ *                       description: Total number of pages
  *               example:
  *                 data:
  *                   - id: 1
- *                     first_name: "John"
- *                     last_name: "Doe"
- *                     email: "john@example.com"
- *                     gender: "M"
- *                     ip_address: "192.168.1.1"
- *                     company: "Tech Corp"
- *                     city: "Auckland"
- *                     title: "Software Engineer"
- *                     website: "https://example.com"
- *                 total: 42
+ *                     first_name: "Laura"
+ *                     last_name: "Richards"
+ *                     email: "lrichards0@reverbnation.com"
+ *                     gender: "Female"
+ *                     ip_address: "81.192.7.99"
+ *                     company: "Meezzy"
+ *                     city: "Kallithéa"
+ *                     title: "Biostatistician III"
+ *                     website: "https://intel.com/aliquam/lacus/morbi/quis.png"
+ *                   - id: 2
+ *                     first_name: "Margaret"
+ *                     last_name: "Mendoza"
+ *                     email: "mmendoza1@sina.com.cn"
+ *                     gender: "Female"
+ *                     ip_address: "193.204.172.141"
+ *                     company: "Skipfire"
+ *                     city: "Jiashi"
+ *                     title: "VP Marketing"
+ *                     website: "http://printfriendly.com/in/lectus/pellentesque/at/nulla.jpg"
+ *                 meta:
+ *                   total: 1000
+ *                   page: 1
+ *                   limit: 2
+ *                   last_page: 500
  *       500:
  *         description: Internal server error
  *         content:
@@ -87,7 +113,7 @@ const router = Router();
  *                 error:
  *                   type: string
  *               example:
- *                 error: "Database connection failed"
+ *                 error: "Failed to fetch customers"
  */
 router.get('/', getCustomers);
 

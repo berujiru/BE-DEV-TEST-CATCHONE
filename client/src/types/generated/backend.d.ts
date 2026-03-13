@@ -50,8 +50,16 @@ export interface paths {
                                 title?: string;
                                 website?: string;
                             }[];
-                            /** @description Total count of matching records (across all pages) */
-                            total?: number;
+                            meta?: {
+                                /** @description Total count of matching records (across all pages) */
+                                total?: number;
+                                /** @description Current page number */
+                                page?: number;
+                                /** @description Records per page */
+                                limit?: number;
+                                /** @description Total number of pages */
+                                last_page?: number;
+                            };
                         };
                     };
                 };
