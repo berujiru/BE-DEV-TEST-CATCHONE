@@ -6,10 +6,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --loader ts-node/esm src/index.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "import": "node --loader ts-node/esm src/importer.ts",
     "build": "tsc",
-    "prepare": "husky"
+    "prepare": "husky",
+    "generate:types": "npx openapi-typescript http://localhost:3000/api-json --output ../client/src/types/generated/backend.d.ts"
   },
   "keywords": [],
   "author": "",
@@ -35,6 +36,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.3.3",
     "nodemon": "^3.1.14",
+    "openapi-typescript": "^7.13.0",
     "swagger-jsdoc": "^6.2.8",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
