@@ -49,6 +49,18 @@ const router = Router();
  *                         type: string
  *                       email:
  *                         type: string
+ *                       gender:
+ *                         type: string
+ *                       ip_address:
+ *                         type: string
+ *                       company:
+ *                         type: string
+ *                       city:
+ *                         type: string
+ *                       title:
+ *                         type: string
+ *                       website:
+ *                         type: string
  *                 total:
  *                   type: integer
  *                   description: Total count of matching records (across all pages)
@@ -58,6 +70,12 @@ const router = Router();
  *                     first_name: "John"
  *                     last_name: "Doe"
  *                     email: "john@example.com"
+ *                     gender: "M"
+ *                     ip_address: "192.168.1.1"
+ *                     company: "Tech Corp"
+ *                     city: "Auckland"
+ *                     title: "Software Engineer"
+ *                     website: "https://example.com"
  *                 total: 42
  *       500:
  *         description: Internal server error
