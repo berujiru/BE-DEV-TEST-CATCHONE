@@ -1,0 +1,18 @@
+# Dependency directories
+# This ignores node_modules in the root AND any subfolder like server/ or client/
+**/node_modules/
+
+# SQLite database file (You don't want to push the actual DB to GitHub)
+*.sqlite
+*.sqlite-journal
+
+# Build files
+dist/
+build/
+
+# Environment variables
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db

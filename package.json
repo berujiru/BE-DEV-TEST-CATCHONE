@@ -1,0 +1,20 @@
+{
+  "name": "be-dev-test-catchone",
+  "version": "1.0.0",
+  "description": "A simple test for Backend developers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berujiru/BE-DEV-TEST-CATCHONE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/berujiru/BE-DEV-TEST-CATCHONE/issues"
+  },
+  "homepage": "https://github.com/berujiru/BE-DEV-TEST-CATCHONE#readme"
+}
