@@ -8,9 +8,18 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN || 'http://localhost:5173';
 
 // Setup Middleware
-app.use(cors());
+app.use(cors({
+  // Explicitly allow your frontend origin
+  origin: ALLOWED_ORIGIN, 
+  // Allow cookies/headers to be sent
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'x-api-key']
+}));
+
 app.use(express.json());
 
 // Swagger Configuration
